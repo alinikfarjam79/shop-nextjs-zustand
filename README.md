@@ -13,7 +13,6 @@
 
 ![screen shot](image4.png)
 
-![screen shot](image5.png)
 
 
 
