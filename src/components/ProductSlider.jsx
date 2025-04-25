@@ -79,7 +79,7 @@ export default function ProductsSlider({
                     {formatTomanFa(parseInt(product.price))}
                   </p>
                   <div className="flex w-full justify-between mt-4">
-                    <span className="bg-red-500 text-white rounded text-base p-1">
+                    <span className="bg-red-500 text-white rounded text-base p-1 px-2 flex items-center justify-center">
                       {product.discount}
                     </span>
                     <p>
