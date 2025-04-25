@@ -1,26 +1,185 @@
 @import "tailwindcss";
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@font-face {
+  font-family: "Vazir";
+  src: url("/fonts/Vazir.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Vazir", sans-serif;
+}
+
+/* main slider style */
+
+.swiper {
+  width: 94%;
+  height: 100%;
+  border-radius: 10px;
+  position: relative;
+}
+
+.mySwiper1 .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  object-fit: cover;
+  object-position: center;
+}
+
+.mySwiper1 .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 10px;
+}
+
+.mySwiper1 .swiper-button-next,
+.mySwiper1 .swiper-button-prev {
+  color: white;
+}
+
+.mySwiper1 .swiper-button-next::after,
+.mySwiper1 .swiper-button-prev::after {
+  font-size: 16px; /* Size of the arrow */
+}
+.mySwiper1 .swiper-pagination {
+  display: flex;
+  justify-content: flex-end;
+  padding-left: 50px;
+  padding-bottom: 20px;
+  z-index: 10;
+}
+
+.mySwiper1 .swiper-pagination-bullet {
+  opacity: 1;
+  width: 10px;
+  height: 10px;
+  background: rgb(226, 221, 221);
+}
+.mySwiper1 .swiper-pagination-bullet-active {
+  background: white;
+  transform: scale(1.2);
+}
+
+/* category slider style */
+.mySwiper2 {
+  position: relative;
+}
+.mySwiper2 .swiper-slide {
+  text-align: center;
+  font-size: 14px;
+  background: #fff;
+  display: flex;
+  gap: 6px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.mySwiper2 .swiper-slide img {
+  display: block;
+  width: 60%;
+  height: 60%;
+  object-fit: contain;
+}
+.mySwiper2 .swiper-button-next,
+.mySwiper2 .swiper-button-prev {
+  position: absolute;
+  color: black;
+  height: 100%;
+  width: 50px;
+  background: linear-gradient(270deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+.mySwiper2 .swiper-button-next {
+  top: 20px;
+  left: 0;
+}
+.mySwiper2 .swiper-button-prev {
+  top: 20px;
+  right: 0;
+}
+
+.mySwiper2 .swiper-button-next::after,
+.mySwiper2 .swiper-button-prev::after {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  font-size: 16px;
+}
+
+/* Products slider */
+.ParentSlider {
+  position: relative;
+}
+.mySwiper3 {
+  width: 94%;
+  height: 450px;
+  border-radius: 10px;
+}
+
+.mySwiper3 .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  object-fit: cover;
+  object-position: center;
+}
+
+.mySwiper3 .swiper-slide img {
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 10px;
+}
+
+/* detail slider */
+.detailSwiper1 {
+  width: 70%;
+}
+.detailSwiper1 .swiper-button-next,
+.detailSwiper1 .swiper-button-prev {
+  color: black;
+  width: 30px;
+  height: 30px;
+  background: rgb(52, 68, 116);
+  border-radius: 8px;
+}
+
+.detailSwiper1 .swiper-button-next::after,
+.detailSwiper1 .swiper-button-prev::after {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  font-size: 16px;
+  color: white;
+  font-weight: bold;
+}
+.detailSwiper2 {
+  margin-top: 30px;
+  width: 70%;
+}
+.detailSwiper2 img {
+  border-radius: 8px;
+}
+.SwiperSlideDetail {
+  border: 1px solid rgba(84, 83, 83, 0.331);
+  border-radius: 8px;
+}
+.detailSwiper2 .swiper-slide-thumb-active {
+  border: 2px solid black;
+  border-radius: 8px;
 }
