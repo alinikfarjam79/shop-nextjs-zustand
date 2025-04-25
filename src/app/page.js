@@ -39,6 +39,9 @@ async function Home() {
         <img src="https://plazadigital.ir/wp-content/uploads/2025/04/Twin-tablet02.avif" className="w-[49%] h-full rounded-2xl" />
         <img src="https://plazadigital.ir/wp-content/uploads/2025/04/Twin-watch.avif" className="w-[49%] h-full rounded-2xl" />
       </div>
+      <div className=" flex items-center  justify-center  py-3  mt-3">
+        <p className="text-xl">developed by <a href="https://github.com/alinikfarjam79/shop-nextjs-zustand" target="_blank" className="text-blue-600">AliNikfarjam</a></p>
+      </div>
     </div>
   )
 }
