@@ -109,7 +109,6 @@ export default function PaymentPage() {
           </div>
         )}
         <form onSubmit={handleSubmit} className="space-y-4">
-          {/* شماره کارت */}
           <div>
             <label className="block mb-1 text-sm font-medium">شماره کارت</label>
             <input
@@ -125,7 +124,6 @@ export default function PaymentPage() {
             />
           </div>
 
-          {/* رمز دوم */}
           <div className="relative">
             <label className="block mb-1 text-sm font-medium">
               رمز دوم (رمز اینترنتی)
@@ -150,7 +148,6 @@ export default function PaymentPage() {
             </div>
           </div>
 
-          {/* CVV2 و تاریخ انقضا */}
           <div className="grid grid-cols-2 gap-4">
             <div>
               <label className="block mb-1 text-sm font-medium">CVV2</label>
