@@ -2,9 +2,11 @@
 
 import { formatTomanFa } from "@/helper/functions";
 import { useCartStore } from "@/store/useCartStore";
+import { useRouter } from "next/navigation";
 import { FiTrash2 } from "react-icons/fi";
 
 function Cart() {
+  const router = useRouter();
   const { cartItems, totalPrice, checkOut } = useCartStore();
   return (
     <div className="flex flex-col min-h-[540px] justify-between ">
@@ -54,7 +56,9 @@ function Cart() {
               </div>
               <button
                 className="w-full bg-green-800 py-2.5 text-white rounded-xl cursor-pointer"
-                onClick={() => checkOut()}
+                onClick={() => {
+                  cartItems.length > 0 && router.push("/payment");
+                }}
               >
                 تسویه حساب
               </button>

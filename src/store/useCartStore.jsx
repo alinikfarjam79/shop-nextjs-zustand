@@ -51,8 +51,8 @@ export const useCartStore = create((set, get) => ({
       toast.error("سبد شما خالی است");
       return;
     }
-    set({ cartItems: [] });
     toast.success(`با موفقیت پرداخت شد`);
+    set({ cartItems: [] });
   },
   totalPrice: () => {
     return get().cartItems.reduce(
